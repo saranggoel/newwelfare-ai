@@ -1,1 +1,1 @@
-# Welfare-AI
+# welfare-ai

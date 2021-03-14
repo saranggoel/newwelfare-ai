@@ -2,12 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Welfare AI</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <script src="form.js"> </script>
+    
 
     <!-- Favicons -->
     <link href="assets/img/favicon.jpg" rel="icon">
@@ -42,7 +47,6 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto " href="#login">Login</a></li>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
@@ -59,9 +63,7 @@
 
             <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
                 <h2>We care for<br><span>your</span><br>welfare!</h2>
-                <div>
                     <a href="#about" class="btn-get-started scrollto">About Us</a>
-                    <a href="#login" class="btn-services scrollto">Login</a>
                 </div>
             </div>
 
@@ -130,14 +132,14 @@
         </header>
 
                 <div class="form">
-                    <form action="contact.php" method="post" role="form" class="php-email-form">
+                    
                         <div class="row">
                             <div class="form-group col-lg-6">
-                                <input type="text" name="name" class="form-control" id="name"
+                                <input type="email" class="form-control" id="email"
                                     placeholder="Email" required>
                             </div>
                             <div class="form-group col-lg-6 mt-3 mt-lg-0">
-                                <input type="email" class="form-control" name="email" id="email"
+                                <input type="password" class="form-control" name="password" id="password"
                                     placeholder="Password" required>
                         </div>
                         <div class="my-3">
@@ -145,12 +147,12 @@
                             <div class="error-message">Login Failed</div>
                             <div class="sent-message">Succesfully Logged In!</div>
                         </div>
-                        <div class="text-center"><button type="submit" title="Login" id = "loginbutton">Login</button></div>
+                        <div class="text-center"><button onclick = "signIn()"  id = "signIn">Login</button></div>
                         </div>
-                        <div class="text-center"><button type="submit" title="Login" id = "regbutton">Sign Up</button></div>
+                        <div class="text-center"><button  onclick = "signUp()"  id = "signUp">Sign Up</button></div>
                         </div>
                       </div>
-                    </form>
+                    
                 </div>
             </div>
             </div>
