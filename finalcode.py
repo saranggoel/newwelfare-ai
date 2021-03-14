@@ -1,17 +1,11 @@
 from statistics import mode
-
 import cv2
 from keras.models import load_model
 import numpy as np
 import dlib
 import time
 import math
-
 BLINK_RATIO_THRESHOLD = 5.7
-
-
-# -----Step 5: Getting to know blink ratio
-
 def midpoint(point1, point2):
     return (point1.x + point2.x) / 2, (point1.y + point2.y) / 2
 
@@ -42,7 +36,6 @@ def get_blink_ratio(eye_points, facial_landmarks):
 
 detector = dlib.get_frontal_face_detector()
 
-# -----Step 4: Detecting Eyes using landmarks in dlib-----
 predictor = dlib.shape_predictor("D:/face_classification-master/src/models/shape_predictor_68_face_landmarks.dat")
 # these landmarks are based on the image above
 left_eye_landmarks = [36, 37, 38, 39, 40, 41]
@@ -146,17 +139,15 @@ while True:
 
     frame = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    # -----Step 3: Face detection with dlib-----
     # detecting faces in the frame
     faces, _, _ = detector.run(image=frame, upsample_num_times=0,
                                adjust_threshold=0.0)
 
-    # -----Step 4: Detecting Eyes using landmarks in dlib-----
+
     for face in faces:
 
         landmarks = predictor(frame, face)
 
-        # -----Step 5: Calculating blink ratio for one eye-----
         left_eye_ratio = get_blink_ratio(left_eye_landmarks, landmarks)
         right_eye_ratio = get_blink_ratio(right_eye_landmarks, landmarks)
         blink_ratio = (left_eye_ratio + right_eye_ratio) / 2
