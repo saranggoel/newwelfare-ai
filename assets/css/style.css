@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #007bff;
+  background: #f68b1f;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #2990ff;
+  background: #ffaf5e;
   color: #fff;
 }
 
@@ -376,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-info h2 span {
-  color: #74b5fc;
+  color: #ffaf5e;
   text-decoration: underline;
 }
 
@@ -401,8 +401,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-info .btn-get-started {
-  background: #007bff;
-  border: 2px solid #007bff;
+  background: #f68b1f;
+  border: 2px solid #f68b1f;
   color: #fff;
 }
 
@@ -417,8 +417,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-info .btn-services:hover {
-  background: #007bff;
-  border-color: #007bff;
+  background: #f68b1f;
+  border-color: #f68b1f;
   color: #fff;
 }
 
@@ -1445,13 +1445,18 @@ section {
 }
 
 #login .php-email-form button[type="submit"] {
-  background: #007bff;
+  background: #f68b1f;
   border: 0;
   border-radius: 20px;
   padding: 8px 30px;
   color: #fff;
   transition: 0.3s;
 }
+
+#login .php-email-form button[type="submit"]:hover {
+  background: #ffaf5e;
+}
+
 
 #login .my-3 .loading {
  display: none;
