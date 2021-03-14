@@ -1,13 +1,10 @@
-/**
-* Template Name: NewBiz - v4.0.1
-* Template URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.text-center {
+  padding: 1%;
+}
+
 body {
   background: #fff;
   color: #444;
@@ -567,18 +564,18 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 2px solid #007bff;
+  border: 2px solid #f68b1f;
   transition: all 0.3s ease-in-out;
 }
 
 #about .about-container .icon-box .icon i {
-  color: #007bff;
+  color: #f68b1f;
   font-size: 24px;
   line-height: 0;
 }
 
 #about .about-container .icon-box:hover .icon {
-  background: #007bff;
+  background: #f68b1f;
 }
 
 #about .about-container .icon-box:hover .icon i {
@@ -1445,4 +1442,49 @@ section {
 
 #footer .credits a:hover {
   color: #f1f7ff;
+}
+
+#login .php-email-form button[type="submit"] {
+  background: #007bff;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 30px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+#login .my-3 .loading {
+ display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#login .my-3 .error-message{
+ display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#login .my-3 .sent-message {
+ display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#login .signup-page{
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
 }
