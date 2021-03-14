@@ -25,8 +25,8 @@ function signInWithEmailPassword() {
 // Call function when user registers in app with email address and password; make sure 
 // validate the user's email and password
 function signUpWithEmailPassword() {
-  var email = "test@example.com";
-  var password = "hunter2";
+  var email = "hello@gmail.com";
+  var password = "hunter2d";
   // [START auth_signup_password]
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
